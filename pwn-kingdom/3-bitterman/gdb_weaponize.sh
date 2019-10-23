@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Usage: bash gdb_weaponize.sh
+# Inspired by "Pwndbg + GEF + Peda — One for all, and all for one" -- https://medium.com/bugbountywriteup/pwndbg-gef-peda-one-for-all-and-all-for-one-714d71bf36b8
+
 G="\033[1;32m"  # GREEN
 Y="\033[1;33m"  # YELLOW
 R="\033[1;31m"  # RED
