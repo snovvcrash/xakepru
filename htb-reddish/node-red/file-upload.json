@@ -1,0 +1,59 @@
+[
+    {
+        "id": "492292e2.396fc4",
+        "type": "tab",
+        "label": "file-upload",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "bf9d25e0.07c338",
+        "type": "file",
+        "z": "492292e2.396fc4",
+        "name": "",
+        "filename": "/tmp/.file",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "x": 581,
+        "y": 230,
+        "wires": []
+    },
+    {
+        "id": "d0b1464b.dbb49",
+        "type": "tcp request",
+        "z": "492292e2.396fc4",
+        "server": "10.10.14.19",
+        "port": "8889",
+        "out": "time",
+        "splitc": "3000",
+        "name": "",
+        "x": 342,
+        "y": 150,
+        "wires": [
+            [
+                "bf9d25e0.07c338"
+            ]
+        ]
+    },
+    {
+        "id": "8e5893e7.112b88",
+        "type": "inject",
+        "z": "492292e2.396fc4",
+        "name": "Connect",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "x": 120,
+        "y": 60,
+        "wires": [
+            [
+                "d0b1464b.dbb49"
+            ]
+        ]
+    }
+]

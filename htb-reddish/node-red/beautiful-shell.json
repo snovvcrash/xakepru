@@ -1,0 +1,106 @@
+[
+    {
+        "id": "a7d4a1fe.7c1c7",
+        "type": "tab",
+        "label": "beautiful-shell",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "87b277d4.47dbb",
+        "type": "tcp request",
+        "z": "a7d4a1fe.7c1c7",
+        "server": "10.10.14.19",
+        "port": "31337",
+        "out": "sit",
+        "splitc": " ",
+        "name": "",
+        "x": 220,
+        "y": 240,
+        "wires": [
+            [
+                "d23e1e94.a7c61"
+            ]
+        ]
+    },
+    {
+        "id": "d23e1e94.a7c61",
+        "type": "exec",
+        "z": "a7d4a1fe.7c1c7",
+        "command": "",
+        "addpay": true,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": true,
+        "name": "",
+        "x": 150,
+        "y": 500,
+        "wires": [
+            [
+                "3599a28d.acf766"
+            ],
+            [
+                "3599a28d.acf766",
+                "f4ae292d.1b81d"
+            ],
+            [
+                "f4ae292d.1b81d"
+            ]
+        ]
+    },
+    {
+        "id": "3599a28d.acf766",
+        "type": "template",
+        "z": "a7d4a1fe.7c1c7",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{{payload}}node-red> ",
+        "output": "str",
+        "x": 503,
+        "y": 500,
+        "wires": [
+            [
+                "87b277d4.47dbb"
+            ]
+        ]
+    },
+    {
+        "id": "f4ae292d.1b81d",
+        "type": "debug",
+        "z": "a7d4a1fe.7c1c7",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 650,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "86042625.7f968",
+        "type": "inject",
+        "z": "a7d4a1fe.7c1c7",
+        "name": "",
+        "topic": "",
+        "payload": "(Connected!) node-red> ",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1.0",
+        "x": 150,
+        "y": 60,
+        "wires": [
+            [
+                "87b277d4.47dbb",
+                "f4ae292d.1b81d"
+            ]
+        ]
+    }
+]

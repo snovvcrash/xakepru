@@ -1,0 +1,8 @@
+# Nmap 7.80 scan initiated Fri Jan 31 00:22:33 2020 as: nmap -n -Pn --min-rate=5000 -oA nmap/tcp-allports -p- 10.10.10.94
+Nmap scan report for 10.10.10.94
+Host is up (0.12s latency).
+Not shown: 65534 closed ports
+PORT     STATE SERVICE
+1880/tcp open  vsat-control
+
+# Nmap done at Fri Jan 31 00:22:49 2020 -- 1 IP address (1 host up) scanned in 15.42 seconds

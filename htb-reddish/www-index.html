@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Reddish</title>
+        <script src="assets/jquery.js" type="text/javascript"></script>
+        <script type="text/javascript">
+						$(document).ready(function () {
+								incrCounter();
+						    getData();
+						});
+
+						function getData() {
+						    $.ajax({
+						        url: "8924d0549008565c554f8128cd11fda4/ajax.php?test=get hits",
+						        cache: false,
+						        dataType: "text",
+						        success: function (data) {
+											console.log("Number of hits:", data)
+						        },
+						        error: function () {
+						        }
+						    });
+						}
+
+						function incrCounter() {
+						    $.ajax({
+						        url: "8924d0549008565c554f8128cd11fda4/ajax.php?test=incr hits",
+						        cache: false,
+						        dataType: "text",
+						        success: function (data) {
+				              console.log("HITS incremented:", data);
+						        },
+						        error: function () {
+						        }
+						    });
+						}
+
+						/*
+							* TODO
+							*
+							* 1. Share the web folder with the database container (Done)
+							* 2. Add here the code to backup databases in /f187a0ec71ce99642e4f0afbd441a68b folder
+							* ...Still don't know how to complete it...
+						*/
+						function backupDatabase() {
+								$.ajax({
+										url: "8924d0549008565c554f8128cd11fda4/ajax.php?backup=...",
+										cache: false,
+										dataType: "text",
+										success: function (data) {
+											console.log("Database saved:", data);
+										},
+										error: function () {
+										}
+								});
+						}
+		</script>
+    </head>
+    <body><h1>It works!</h1>
+    <p>This is the default web page for this server.</p>
+    <p>The web server software is running but no content has been added, yet.</p>
+    </body>
+</html>

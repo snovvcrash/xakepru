@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Fri Jan 31 00:22:33 2020 as: nmap -n -Pn -&#45;min-rate=5000 -oA nmap/tcp-allports -p- 10.10.10.94 -->
+<nmaprun scanner="nmap" args="nmap -n -Pn -&#45;min-rate=5000 -oA nmap/tcp-allports -p- 10.10.10.94" start="1580419353" startstr="Fri Jan 31 00:22:33 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1580419353" endtime="1580419368"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.94" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65534">
+<extrareasons reason="resets" count="65534"/>
+</extraports>
+<port protocol="tcp" portid="1880"><state state="open" reason="syn-ack" reason_ttl="62"/><service name="vsat-control" method="table" conf="3"/></port>
+</ports>
+<times srtt="123940" rttvar="1496" to="129924"/>
+</host>
+<runstats><finished time="1580419369" timestr="Fri Jan 31 00:22:49 2020" elapsed="15.42" summary="Nmap done at Fri Jan 31 00:22:49 2020; 1 IP address (1 host up) scanned in 15.42 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

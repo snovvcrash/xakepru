@@ -1,0 +1,67 @@
+[
+    {
+        "id": "f3dcdf4a.d62688",
+        "type": "tab",
+        "label": "simple-shell",
+        "disabled": true,
+        "info": ""
+    },
+    {
+        "id": "393d12e6.09520e",
+        "type": "tcp in",
+        "z": "f3dcdf4a.d62688",
+        "name": "",
+        "server": "client",
+        "host": "10.10.14.19",
+        "port": "31337",
+        "datamode": "stream",
+        "datatype": "buffer",
+        "newline": "",
+        "topic": "",
+        "base64": false,
+        "x": 132.5,
+        "y": 53,
+        "wires": [
+            [
+                "daf05b93.26c74"
+            ]
+        ]
+    },
+    {
+        "id": "daf05b93.26c74",
+        "type": "exec",
+        "z": "f3dcdf4a.d62688",
+        "command": "",
+        "addpay": true,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "",
+        "x": 406,
+        "y": 120,
+        "wires": [
+            [
+                "cafddf2.3324fa"
+            ],
+            [
+                "cafddf2.3324fa"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "cafddf2.3324fa",
+        "type": "tcp out",
+        "z": "f3dcdf4a.d62688",
+        "host": "",
+        "port": "",
+        "beserver": "reply",
+        "base64": false,
+        "end": false,
+        "name": "",
+        "x": 633.5,
+        "y": 58,
+        "wires": []
+    }
+]
