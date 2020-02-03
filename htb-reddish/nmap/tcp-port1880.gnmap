@@ -1,4 +1,0 @@
-# Nmap 7.80 scan initiated Fri Jan 31 00:23:04 2020 as: nmap -n -Pn -sV -sC -oA nmap/tcp-port1880 -p1880 10.10.10.94
-Host: 10.10.10.94 ()	Status: Up
-Host: 10.10.10.94 ()	Ports: 1880/open/tcp//http//Node.js Express framework/
-# Nmap done at Fri Jan 31 00:23:20 2020 -- 1 IP address (1 host up) scanned in 15.73 seconds
