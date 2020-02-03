@@ -1,0 +1,43 @@
+version: '3'
+services:
+  nodered:
+    build: ./multi-nodered
+    hostname: nodered
+    ports:
+     - "1880:1880"
+    networks:
+      - default
+      - internal-network
+    restart: always
+  redis:
+    build: ./redis
+    hostname: redis
+    volumes:
+     - ./www:/var/www/html
+    networks:
+     - internal-network
+    restart: always
+  www:
+    build: ./apache
+    hostname: www
+    volumes:
+     - ./www:/var/www/html
+     - /home:/home
+    networks:
+     - internal-network
+     - internal-network-2
+    restart: always
+  backup:
+    build: ./rsync
+    hostname: backup
+    volumes:
+     - ./rsync/www:/backup
+    networks:
+     - internal-network-2
+    restart: always
+    privileged: true
+networks:
+  internal-network:
+   internal: true
+  internal-network-2:
+   internal: true
